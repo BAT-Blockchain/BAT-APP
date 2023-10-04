@@ -1,0 +1,268 @@
+.header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    background-color: #090909;
+    width: 100vw;
+    height: 10vh;
+    z-index: 100;
+    position: fixed;
+}
+
+.menu{
+    padding-left: 10px;
+}
+
+.logo{
+    height: 25px;
+}
+
+.lupa{
+    height: 21px;
+    padding: 5px;
+    padding-right: 50px;
+    padding-left: 1px;
+    
+}
+
+.log{
+    border: 2px solid rgb(95, 221, 168);
+    border-radius: 50px;
+    padding: 4px;
+    padding-right: 20px;
+    padding-left: 20px;
+    position: relative;
+    top: -7px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.log:hover{
+    color: rgb(95, 221, 168);
+   /* background-color: rgb(53, 204, 141);
+    color: white;
+    transition: all 0.2s;*/
+}
+
+.nos:hover {
+    color: white;
+    transition: all 0.2s;
+}
+
+
+.cont:hover {
+    color: white;
+    transition: all 0.2s;
+}
+
+
+.sub:hover {
+    color: white;
+    transition: all 0.2s;
+}
+
+.datos {
+    position: absolute;
+    top: 10vh;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: black;
+}
+
+.titulo{
+    text-align: center;
+    text-decoration: underline rgb(255, 255, 255);
+    padding-top: 20px;
+}
+
+.izquierda {
+    padding-left: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.cardRegistro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex: 1;
+    padding: 20px;
+    width: 30vw;
+    height: 12vh;
+    border-radius: 15px;
+    background-color: #1C1C1C;
+    border: 5px solid rgb(95, 221, 168);
+    border-top: 50px solid rgb(95, 221, 168);
+}
+
+.tituloRegistro {
+    background-color: transparent;
+    position: absolute;
+    top: 135px;
+    text-align: center;
+    font-size: 25px;
+    text-decoration: underline;
+    color: black;
+}
+
+.textoRegistro {
+    font-weight: 800;
+    font-size: 40px;
+    background-color: transparent;
+    position: relative;
+    left: -8vh;
+    text-transform: uppercase;
+}
+
+.camion {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    position: relative;
+    left: 5vh;
+    top: 1vh;
+}
+
+.cardGps {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+    width: 30vw;
+    height: 12vh;
+    border-radius: 15px;
+    background-color: #1C1C1C;
+    border: 5px solid rgb(95, 221, 168);
+    border-top: 50px solid rgb(95, 221, 168);
+}
+
+.tituloGps {
+    background-color: transparent;
+    position: absolute;
+    top: 335px;
+    text-align: center;
+    font-size: 25px;text-decoration: underline;
+    color: black;
+}
+
+.textoLatitud {   
+    font-size: 30px;
+    background-color: transparent;
+    position: relative;
+    left: -12vh;
+    top: 11vh;
+}
+
+.textoLongitud {
+    font-size: 30px;
+    background-color: transparent;
+    position: relative;
+    left: -12vh;
+    top: 2vh;
+}
+
+.gps {
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    position: relative;
+    left: 20vh;
+    top: -15vh;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.item {
+    margin: 30px;
+}
+
+.ChartTemperatura{
+    border-radius: 1rem;
+    background-color: #1C1C1C;
+    padding: 5px;
+}
+
+.ChartHumedad {  
+    border-radius: 1rem;
+    background-color: #1C1C1C;
+    padding: 5px;
+}
+
+.cardTiempo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+    width: 30vw;
+    height: 12vh;
+    border-radius: 15px;
+    background-color: #1C1C1C;
+    border: 5px solid rgb(95, 221, 168);
+    border-top: 50px solid rgb(95, 221, 168);
+}
+
+.tituloTiempo {
+    background-color: transparent;
+    position: absolute;
+    top: 535px;
+    text-align: center;
+    font-size: 25px;
+    text-decoration: underline;
+    color: black;
+}
+
+.textoTiempo {
+    font-size: 55px;
+    text-align: center;
+    background-color: transparent;
+    position: relative;
+    left: -16vh;
+    top: 6.5vh;
+}
+
+.reloj {
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    position: relative;
+    left: 15vh;
+    top: -13vh;
+}
+
+.containerTemperatura{
+    width: 500px;
+    position: absolute;
+    right: 150px;        
+    margin-top: 500px;
+    top: 24px;
+}
+
+.containerHumedad{
+    width: 500px;
+    position: absolute;
+    right: 150px;        
+    margin-top: 210px;
+    top: 28px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
