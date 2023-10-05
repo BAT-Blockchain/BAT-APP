@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head'
 import Temperatura from './LineChartTemperatura.jsx'
 import Humedad from './LineChartHumedad'
-import styles from '@/styles/Home.module.css'
+import styles from '@/src/styles/Home.module.css'
 import Menu from './components/Menu.jsx'
 import Busqueda from './components/Busqueda'
 import { Fredoka } from 'next/font/google'

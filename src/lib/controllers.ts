@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/db"
+import { prisma } from "./db"
 import { isValidCamion, isValidSensor, checkPrismaError } from "./utils"
 import { camionPayload } from "./types"
 

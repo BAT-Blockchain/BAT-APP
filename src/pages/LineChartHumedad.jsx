@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { Chart } from "chart.js";
-import styles from '@/styles/Home.module.css'
+import styles from '@/src/styles/Home.module.css'
 
 function Humedad(props) {
   useEffect(() => {

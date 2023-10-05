@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import { getSensores, createSensor } from "@/lib/controllers"
+import { getSensores, createSensor } from "@/src/lib/controllers"
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   let code: any

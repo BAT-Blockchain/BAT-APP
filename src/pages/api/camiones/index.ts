@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next"
-import { getCamion, createCamion } from "@/lib/controllers"
+import { getCamion, createCamion } from "@/src/lib/controllers"
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   let code: any
