@@ -69,11 +69,12 @@ export default function Example({ data }) {
 
                 <li className={styles.item}>
                   <div className={styles.cardTiempo}>
-                    <p style={fredoka.style} className={styles.tituloTiempo}>Tiempo de medición</p>
-                    <p style={fredoka.style} className={styles.textoTiempo}> 12:00 </p>
+                    <p style={fredoka.style} className={styles.tituloTiempo}>Peso </p>
+                    <p style={fredoka.style} className={styles.textoTiempo}> {data.peso} g </p>
                     <img className={styles.reloj} src="reloj-de-pared-2.png" alt="" />
                   </div>
                 </li>
+
               </ul>
 
             </div>
@@ -104,7 +105,6 @@ export const getServerSideProps = async (context) => {
   const options = { method: 'GET' };
   const res = await fetch("https://next-app-api.vercel.app/api/camiones/caba-cor/sensores", options)
   const datos = await res.json()
-
   let humedad = []
   let temperatura = []
   let time = []
@@ -123,6 +123,7 @@ export const getServerSideProps = async (context) => {
         temperatura: temperatura,
         time: time,
         ubicacion: { latitud: datos[0].latitud, longitud: datos[0].longitud },
+        peso: datos[0].peso,
         idCam: datos[0].idCamion
       }
 

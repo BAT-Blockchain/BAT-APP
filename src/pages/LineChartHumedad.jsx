@@ -15,9 +15,9 @@ function Humedad(props) {
           borderColor: "rgb(95, 221, 168)",
           backgroundColor: "rgb(95, 221, 168)",
           fill: false,
-        }  
+        }
         ]
-      },
+      }
     });
   }, [])
   return (

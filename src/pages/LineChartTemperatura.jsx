@@ -8,8 +8,8 @@ function Temperatura(props) {
     new Chart(ctx, {
       type: 'line',
       data: {
-          labels: props.labels,
-          datasets: [{
+        labels: props.labels,
+        datasets: [{
           data: props.data,
           label: "Temperatura",
           borderColor: "rgb(95, 221, 168)",
@@ -17,7 +17,7 @@ function Temperatura(props) {
           fill: false,
         }
         ]
-      },
+      }
     });
   }, [])
   return (
