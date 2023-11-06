@@ -1,3 +1,4 @@
+"use client"
 import { useEffect } from "react"
 import { Chart } from "chart.js";
 import styles from '@/src/app/styles/Home.module.css'
