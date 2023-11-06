@@ -12,6 +12,7 @@ const fredoka = Fredoka({ subsets: ['latin'], weight: '300', width: 110 })
 
 export default async function Page() {
   const data = await getData()
+  console.log(data)
   return (
     <div className={styles.body}>
       <Head>
