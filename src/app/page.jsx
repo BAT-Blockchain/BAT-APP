@@ -1,5 +1,3 @@
-"use client"
-
 import React from 'react';
 import Head from 'next/head'
 import Temperatura from '@/src/components/LineChartTemperatura.jsx'
@@ -11,7 +9,8 @@ import { Fredoka } from 'next/font/google'
 
 const fredoka = Fredoka({ subsets: ['latin'], weight: '300', width: 110 })
 
-export default function Example({ data }) {
+export default async function Page() {
+  const data = await getData()
   return (
     <div className={styles.body}>
       <Head>
@@ -82,7 +81,7 @@ export default function Example({ data }) {
   )
 }
 
-export const getServerSideProps = async (context) => {
+async function getData() {
   const options = { method: 'GET' };
   const res = await fetch("https://next-app-api.vercel.app/api/camiones/caba-cor/sensores", options)
   const datos = await res.json()
@@ -98,15 +97,11 @@ export const getServerSideProps = async (context) => {
     time.push(hours + ':' + minutes)
   }
   return {
-    props: {
-      data: {
-        humedad: humedad,
-        temperatura: temperatura,
-        time: time,
-        ubicacion: { latitud: datos[0].latitud, longitud: datos[0].longitud },
-        peso: datos[0].peso,
-        idCam: datos[0].idCamion
-      }
-    }
+    humedad: humedad,
+    temperatura: temperatura,
+    time: time,
+    ubicacion: { latitud: datos[0].latitud, longitud: datos[0].longitud },
+    peso: datos[0].peso,
+    idCam: datos[0].idCamion
   }
 }
