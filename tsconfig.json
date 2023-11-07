@@ -34,7 +34,9 @@
     "**/*.ts",
     "**/*.tsx",
     "src/app/layout.jsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "src/app/Providers.jsx",
+    "src/components/Navbar.jsx"
   ],
   "exclude": [
     "node_modules"

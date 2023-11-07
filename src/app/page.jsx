@@ -3,15 +3,12 @@ import Head from 'next/head'
 import Temperatura from '@/src/components/LineChartTemperatura.jsx'
 import Humedad from '@/src/components/LineChartHumedad'
 import styles from '@/src/app/styles/Home.module.css'
-import Menu from '@/src/components/Menu.jsx'
-import Busqueda from '@/src/components/Busqueda'
 import { Fredoka } from 'next/font/google'
 
 const fredoka = Fredoka({ subsets: ['latin'], weight: '300', width: 110 })
 
 export default async function Page() {
   const data = await getData()
-  console.log(data)
   return (
     <div className={styles.body}>
       <Head>
@@ -20,21 +17,6 @@ export default async function Page() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/LogoB.png/" />
       </Head>
-      <div style={fredoka.style} className={styles.header}>
-        <div className={styles.left}>
-          <a href="" className={styles.menu} ><Menu width={24} height={23} /></a>
-          <a href=""> <img className={styles.logo} src="logo-datos.png" /></a>
-        </div>
-        <div className={styles.center}>
-          <a className={styles.nos} href="">NOSOTROS</a>
-          <a className={styles.cont} href="">CONTACTO</a>
-          <a className={styles.sub} href="">SUBSCRIPCIÓN</a>
-        </div>
-        <div className={styles.right}>
-          <a className={styles.log} href="">Log In</a>
-          <a href="" className={styles.lupa}><Busqueda width={24} height={23} /></a>
-        </div>
-      </div>
       <div className={styles.datos}>
         {
           <div className={styles.resu}>

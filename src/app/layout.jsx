@@ -1,4 +1,6 @@
 import '@/src/app/styles/globals.css'
+import { Providers } from '@/src/app/Providers'
+import Navbar from '@/src/components/Navbar'
 export default function RootLayout({
     // Layouts must accept a children prop.
     // This will be populated with nested layouts or pages
@@ -6,7 +8,13 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body>{children}</body>
+            <Providers>
+                <body>
+                    <Navbar>
+                    </Navbar>
+                    {children}
+                </body>
+            </Providers>
         </html>
     )
 }
