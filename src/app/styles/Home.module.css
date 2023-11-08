@@ -1,0 +1,1336 @@
+ /* Media Query for Mobile Devices */
+ @media (max-width: 480px) {
+     .header {
+         align-items: center;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         background-color: #090909;
+         top: 0px;
+         left: 0px;
+         width: 100vw;
+         height: 19vh;
+         z-index: 100;
+         position: fixed;
+     }
+
+     .menu {
+         padding-left: 10px;
+         display: none;
+     }
+
+     .logo {
+         height: 25px;
+         position: relative;
+         left: -10px;
+         top: -7px;
+     }
+
+     .lupa {
+         height: 21px;
+         padding: 5px;
+         padding-right: 50px;
+         padding-left: 1px;
+         display: none;
+
+     }
+
+     .log {
+         border: 2px solid rgb(95, 221, 168);
+         border-radius: 50px;
+         padding: 4px;
+         padding-right: 20px;
+         padding-left: 20px;
+         position: relative;
+         font-size: 15px;
+         font-weight: 500;
+         left: -12px;
+         top: 14px;
+     }
+
+     .log:hover {
+         color: rgb(95, 221, 168);
+         /* background-color: rgb(53, 204, 141);
+        color: white;
+        transition: all 0.2s;*/
+     }
+
+     .nos:hover {
+         color: white;
+         transition: all 0.2s;
+     }
+
+
+     .cont:hover {
+         color: white;
+         transition: all 0.2s;
+     }
+
+
+     .sub:hover {
+         color: white;
+         transition: all 0.2s;
+     }
+
+     .datos {
+         position: flex;
+         width: 100%;
+         height: 205%;
+         color: white;
+
+     }
+
+     .titulo {
+         text-align: center;
+         text-decoration: underline rgb(255, 255, 255);
+         padding-top: 18vh;
+         font-size: 21px;
+     }
+
+     .izquierda {
+         padding-top: 5px;
+         padding-bottom: 30px;
+     }
+
+     .cardRegistro {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         align-content: center;
+         flex: 1;
+         padding: 20px;
+         width: 75vw;
+         height: 12vh;
+         border-radius: 15px;
+         background-color: #1C1C1C;
+         border: 5px solid rgb(95, 221, 168);
+         border-top: 50px solid rgb(95, 221, 168);
+         margin-left: -5vh;
+     }
+
+     .tituloRegistro {
+         position: absolute;
+         font-size: 23px;
+         text-decoration: underline;
+         color: black;
+         top: 27.5vh;
+
+     }
+
+     .textoRegistro {
+         font-weight: 800;
+         font-size: 40px;
+         background-color: transparent;
+         position: relative;
+         text-transform: uppercase;
+     }
+
+     .camion {
+         width: 16vh;
+         height: 16vh;
+         background-color: transparent;
+         position: relative;
+         top: 1vh;
+     }
+
+     .cardGps {
+         display: flex;
+         justify-content: center;
+         align-content: center;
+         align-items: center;
+         flex-direction: column;
+         flex: 1;
+         padding: 20px;
+         width: 75vw;
+         height: 12vh;
+         border-radius: 15px;
+         background-color: #1C1C1C;
+         border: 5px solid rgb(95, 221, 168);
+         border-top: 50px solid rgb(95, 221, 168);
+         margin-left: -5vh;
+     }
+
+
+     .tituloGps {
+         background-color: transparent;
+         position: relative;
+         text-align: center;
+         font-size: 25px;
+         text-decoration: underline;
+         color: black;
+         top: 3.7vh;
+     }
+
+     .textoLatitud {
+         font-size: 25px;
+         background-color: transparent;
+         position: relative;
+         margin-top: 40px;
+         right: 9vh;
+     }
+
+     .textoLongitud {
+         font-size: 25px;
+         background-color: transparent;
+         position: relative;
+         margin-top: 4px;
+         right: 9vh;
+     }
+
+     .gps {
+         width: 12vh;
+         height: 12vh;
+         position: relative;
+         bottom: 13vh;
+         left: 8vh;
+     }
+
+     .cardTiempo {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         align-content: center;
+         padding: 20px;
+         width: 75vw;
+         height: 12vh;
+         border-radius: 15px;
+         background-color: #1C1C1C;
+         border: 5px solid rgb(95, 221, 168);
+         border-top: 50px solid rgb(95, 221, 168);
+         margin-left: -5vh;
+
+     }
+
+     .tituloTiempo {
+         background-color: transparent;
+         position: relative;
+         text-align: center;
+         font-size: 25px;
+         text-decoration: underline;
+         color: black;
+         bottom: 11vh;
+         left: 13vh;
+
+     }
+
+     .textoTiempo {
+         font-size: 35px;
+         text-align: center;
+         background-color: transparent;
+         position: relative;
+         right: 7vh;
+
+     }
+
+     .reloj {
+         width: 12vh;
+         height: 12vh;
+         background-color: transparent;
+         position: relative;
+
+     }
+
+     .list {
+         list-style-type: none;
+     }
+
+     .item {
+         margin: 30px;
+     }
+
+     .ChartTemperatura {
+         border-radius: 1rem;
+         background-color: #1C1C1C;
+         padding: 5px;
+         align-items: center;
+         justify-content: center;
+     }
+
+     .ChartHumedad {
+         border-radius: 1rem;
+         background-color: #1C1C1C;
+         padding: 5px;
+         align-items: center;
+         justify-content: center;
+     }
+
+
+
+     .containerTemperatura {
+         width: 350px;
+         position: relative;
+         align-items: center;
+         justify-content: center;
+         margin-top: -40px;
+         margin-bottom: 20px;
+         margin-left: 3vh;
+     }
+
+     .containerHumedad {
+         width: 350px;
+         position: relative;
+         align-items: center;
+         justify-content: center;
+         margin-bottom: 10px;
+         margin-left: 3vh;
+     }
+ }
+
+ /* Media Query for low resolution  Tablets, Ipads */
+ @media (min-width: 481px) and (max-width: 767px) {
+     .header {
+         align-items: center;
+         display: flex;
+         justify-content: space-between;
+         top: 0;
+         left: 0;
+         background-color: #090909;
+         width: 100vw;
+         height: 10vh;
+         z-index: 100;
+         position: fixed;
+     }
+
+     .menu {
+         padding-left: 10px;
+         display: none;
+     }
+
+     .logo {
+         height: 25px;
+     }
+
+     .lupa {
+         height: 21px;
+         padding: 5px;
+         padding-right: 50px;
+         padding-left: 1px;
+         display: none;
+
+     }
+
+     .log {
+         border: 2px solid rgb(95, 221, 168);
+         border-radius: 50px;
+         padding: 4px;
+         padding-right: 20px;
+         padding-left: 20px;
+         position: relative;
+         font-size: 15px;
+         font-weight: 500;
+         margin-right: 50px;
+     }
+
+     .log:hover {
+         color: rgb(95, 221, 168);
+         /* background-color: rgb(53, 204, 141);
+        color: white;
+        transition: all 0.2s;*/
+     }
+
+     .nos:hover {
+         color: white;
+         transition: all 0.2s;
+     }
+
+
+     .cont:hover {
+         color: white;
+         transition: all 0.2s;
+     }
+
+
+     .sub:hover {
+         color: white;
+         transition: all 0.2s;
+     }
+
+     .datos {
+         position: absolute;
+         top: 10vh;
+         width: 100%;
+         height: 205%;
+         color: white;
+
+     }
+
+     .titulo {
+         text-align: center;
+         text-decoration: underline rgb(255, 255, 255);
+         padding-top: 20px;
+     }
+
+     .izquierda {
+         padding-top: 30px;
+         padding-bottom: 30px;
+
+
+     }
+
+     .cardRegistro {
+         display: absolute;
+         justify-content: center;
+         align-items: center;
+         align-content: center;
+         flex: 1;
+         padding: 20px;
+         width: 70vw;
+         height: 12vh;
+         border-radius: 15px;
+         background-color: #1C1C1C;
+         border: 5px solid rgb(95, 221, 168);
+         border-top: 50px solid rgb(95, 221, 168);
+     }
+
+     .tituloRegistro {
+         background-color: transparent;
+         position: absolute;
+         top: 135px;
+         text-align: center;
+         font-size: 25px;
+         text-decoration: underline;
+         color: black;
+         margin-bottom: 1.5em;
+     }
+
+     .textoRegistro {
+         font-weight: 800;
+         font-size: 40px;
+         background-color: transparent;
+         position: relative;
+         left: -8vh;
+         text-transform: uppercase;
+     }
+
+     .camion {
+         width: 100px;
+         height: 100px;
+         background-color: transparent;
+         position: relative;
+         left: 5vh;
+         top: 1vh;
+     }
+
+     .cardGps {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         align-content: center;
+         padding: 20px;
+         width: 70vw;
+         height: 12vh;
+         border-radius: 15px;
+         background-color: #1C1C1C;
+         border: 5px solid rgb(95, 221, 168);
+         border-top: 50px solid rgb(95, 221, 168);
+     }
+
+     .tituloGps {
+         background-color: transparent;
+         position: absolute;
+         top: 335px;
+         text-align: center;
+         font-size: 25px;
+         text-decoration: underline;
+         color: black;
+     }
+
+     .textoLatitud {
+         font-size: 30px;
+         background-color: transparent;
+         position: relative;
+         left: -12vh;
+         top: 11vh;
+     }
+
+     .textoLongitud {
+         font-size: 30px;
+         background-color: transparent;
+         position: relative;
+         left: -12vh;
+         top: 2vh;
+     }
+
+     .gps {
+         width: 80px;
+         height: 80px;
+         background-color: transparent;
+         position: relative;
+         left: 20vh;
+         top: -15vh;
+     }
+
+     .cardTiempo {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         align-content: center;
+         padding: 20px;
+         width: 70vw;
+         height: 12vh;
+         border-radius: 15px;
+         background-color: #1C1C1C;
+         border: 5px solid rgb(95, 221, 168);
+         border-top: 50px solid rgb(95, 221, 168);
+     }
+
+     .tituloTiempo {
+         background-color: transparent;
+         position: absolute;
+         top: 535px;
+         text-align: center;
+         font-size: 25px;
+         text-decoration: underline;
+         color: black;
+     }
+
+     .textoTiempo {
+         font-size: 55px;
+         text-align: center;
+         background-color: transparent;
+         position: relative;
+         left: -16vh;
+         top: 6.5vh;
+     }
+
+     .reloj {
+         width: 75px;
+         height: 75px;
+         background-color: transparent;
+         position: relative;
+         left: 15vh;
+         top: -13vh;
+     }
+
+     .list {
+         list-style-type: none;
+     }
+
+     .item {
+         margin: 30px;
+     }
+
+     .ChartTemperatura {
+         border-radius: 1rem;
+         background-color: #1C1C1C;
+         padding: 5px;
+     }
+
+     .ChartHumedad {
+         border-radius: 1rem;
+         background-color: #1C1C1C;
+         padding: 5px;
+     }
+
+
+
+     .containerTemperatura {
+         width: 500px;
+         position: absolute;
+         right: 145px;
+         margin-top: 1090px;
+         top: 24px;
+     }
+
+     .containerHumedad {
+         width: 500px;
+         position: absolute;
+         right: 145px;
+         margin-top: 800px;
+         top: 28px;
+     }
+ }
+
+ /* Media Query for Tablets Ipads portrait mode */
+ @media (min-width: 768px) and (max-width: 803px) {
+     .header {
+         align-items: center;
+         display: flex;
+         justify-content: space-between;
+         top: 0;
+         left: 0;
+         background-color: #090909;
+         width: 100vw;
+         height: 10vh;
+         z-index: 100;
+         position: fixed;
+     }
+
+     .menu {
+         padding-left: 10px;
+         display: none;
+     }
+
+     .logo {
+         height: 25px;
+     }
+
+     .lupa {
+         height: 21px;
+         padding: 5px;
+         padding-right: 50px;
+         padding-left: 1px;
+         display: none;
+
+     }
+
+     .log {
+         border: 2px solid rgb(95, 221, 168);
+         border-radius: 50px;
+         padding: 4px;
+         padding-right: 20px;
+         padding-left: 20px;
+         position: relative;
+         font-size: 15px;
+         font-weight: 500;
+         margin-right: 50px;
+     }
+
+     .log:hover {
+         color: rgb(95, 221, 168);
+         /* background-color: rgb(53, 204, 141);
+        color: white;
+        transition: all 0.2s;*/
+     }
+
+     .nos:hover {
+         color: white;
+         transition: all 0.2s;
+     }
+
+
+     .cont:hover {
+         color: white;
+         transition: all 0.2s;
+     }
+
+
+     .sub:hover {
+         color: white;
+         transition: all 0.2s;
+     }
+
+     .datos {
+         position: absolute;
+         top: 10vh;
+         width: 100%;
+         height: 205%;
+         color: white;
+
+     }
+
+     .titulo {
+         text-align: center;
+         text-decoration: underline rgb(255, 255, 255);
+         padding-top: 20px;
+     }
+
+     .izquierda {
+
+         padding-top: 30px;
+         padding-bottom: 30px;
+     }
+
+     .cardRegistro {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         align-content: center;
+         flex: 1;
+         padding: 20px;
+         width: 70vw;
+         height: 12vh;
+         border-radius: 15px;
+         background-color: #1C1C1C;
+         border: 5px solid rgb(95, 221, 168);
+         border-top: 50px solid rgb(95, 221, 168);
+     }
+
+     .tituloRegistro {
+         background-color: transparent;
+         position: absolute;
+         top: 135px;
+         text-align: center;
+         font-size: 25px;
+         text-decoration: underline;
+         color: black;
+     }
+
+     .textoRegistro {
+         font-weight: 800;
+         font-size: 40px;
+         background-color: transparent;
+         position: relative;
+         left: -8vh;
+         text-transform: uppercase;
+     }
+
+     .camion {
+         width: 100px;
+         height: 100px;
+         background-color: transparent;
+         position: relative;
+         left: 5vh;
+         top: 1vh;
+     }
+
+     .cardGps {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         align-content: center;
+         padding: 20px;
+         width: 70vw;
+         height: 12vh;
+         border-radius: 15px;
+         background-color: #1C1C1C;
+         border: 5px solid rgb(95, 221, 168);
+         border-top: 50px solid rgb(95, 221, 168);
+     }
+
+     .tituloGps {
+         background-color: transparent;
+         position: relative;
+         text-align: center;
+         font-size: 25px;
+         text-decoration: underline;
+         color: black;
+     }
+
+     .textoLatitud {
+         font-size: 30px;
+         background-color: transparent;
+         position: relative;
+         left: -12vh;
+         top: 11vh;
+     }
+
+     .textoLongitud {
+         font-size: 30px;
+         background-color: transparent;
+         position: relative;
+         left: -12vh;
+         top: 2vh;
+     }
+
+     .gps {
+         width: 80px;
+         height: 80px;
+         background-color: transparent;
+         position: relative;
+         left: 20vh;
+         top: -15vh;
+     }
+
+     .cardTiempo {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         align-content: center;
+         padding: 20px;
+         width: 70vw;
+         height: 12vh;
+         border-radius: 15px;
+         background-color: #1C1C1C;
+         border: 5px solid rgb(95, 221, 168);
+         border-top: 50px solid rgb(95, 221, 168);
+     }
+
+     .tituloTiempo {
+         background-color: transparent;
+         position: absolute;
+         top: 535px;
+         text-align: center;
+         font-size: 25px;
+         text-decoration: underline;
+         color: black;
+     }
+
+     .textoTiempo {
+         font-size: 55px;
+         text-align: center;
+         background-color: transparent;
+         position: relative;
+         left: -16vh;
+         top: 6.5vh;
+     }
+
+     .reloj {
+         width: 75px;
+         height: 75px;
+         background-color: transparent;
+         position: relative;
+         left: 15vh;
+         top: -13vh;
+     }
+
+     .list {
+         list-style-type: none;
+     }
+
+     .item {
+         margin: 30px;
+     }
+
+     .ChartTemperatura {
+         border-radius: 1rem;
+         background-color: #1C1C1C;
+         padding: 5px;
+     }
+
+     .ChartHumedad {
+         border-radius: 1rem;
+         background-color: #1C1C1C;
+         padding: 5px;
+     }
+
+
+
+     .containerTemperatura {
+         width: 500px;
+         position: absolute;
+         right: 145px;
+         margin-top: 1090px;
+         top: 24px;
+     }
+
+     .containerHumedad {
+         width: 500px;
+         position: absolute;
+         right: 145px;
+         margin-top: 800px;
+         top: 28px;
+     }
+ }
+
+
+
+ /* Media Query for Laptops and Desktops */
+ @media (min-width: 804px) and (max-width: 1280px) {
+     .header {
+         align-items: center;
+         display: flex;
+         justify-content: space-between;
+         top: 0;
+         left: 0;
+         background-color: #090909;
+         width: 100vw;
+         height: 10vh;
+         z-index: 100;
+         position: fixed;
+     }
+
+     .menu {
+         padding-left: 10px;
+     }
+
+     .logo {
+         height: 25px;
+     }
+
+     .lupa {
+         height: 21px;
+         padding: 5px;
+         padding-right: 50px;
+         padding-left: 1px;
+
+     }
+
+     .log {
+         border: 2px solid rgb(95, 221, 168);
+         border-radius: 50px;
+         padding: 4px;
+         padding-right: 20px;
+         padding-left: 20px;
+         position: relative;
+         top: -7px;
+         font-size: 15px;
+         font-weight: 500;
+     }
+
+     .log:hover {
+         color: rgb(95, 221, 168);
+         /* background-color: rgb(53, 204, 141);
+        color: white;
+        transition: all 0.2s;*/
+     }
+
+     .nos:hover {
+         color: white;
+         transition: all 0.2s;
+     }
+
+
+     .cont:hover {
+         color: white;
+         transition: all 0.2s;
+     }
+
+
+     .sub:hover {
+         color: white;
+         transition: all 0.2s;
+     }
+
+     .datos {
+         position: absolute;
+         top: 10vh;
+         width: 100%;
+         height: 205%;
+         color: white;
+
+     }
+
+     .titulo {
+         text-align: center;
+         text-decoration: underline rgb(255, 255, 255);
+         padding-top: 20px;
+     }
+
+     .izquierda {
+         padding-left: 100px;
+         padding-top: 30px;
+         padding-bottom: 30px;
+     }
+
+     .cardRegistro {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         align-content: center;
+         flex: 1;
+         padding: 20px;
+         width: 50vw;
+         height: 22vh;
+         border-radius: 15px;
+         background-color: #1C1C1C;
+         border: 5px solid rgb(95, 221, 168);
+         border-top: 50px solid rgb(95, 221, 168);
+     }
+
+     .tituloRegistro {
+         background-color: transparent;
+         position: absolute;
+         top: 135px;
+         text-align: center;
+         font-size: 25px;
+         text-decoration: underline;
+         color: black;
+     }
+
+     .textoRegistro {
+         font-weight: 800;
+         font-size: 40px;
+         background-color: transparent;
+         position: relative;
+         left: -8vh;
+         text-transform: uppercase;
+     }
+
+     .camion {
+         width: 100px;
+         height: 100px;
+         background-color: transparent;
+         position: relative;
+         left: 5vh;
+         top: 1vh;
+     }
+
+     .cardGps {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         align-content: center;
+         padding: 20px;
+         width: 50vw;
+         height: 22vh;
+         border-radius: 15px;
+         background-color: #1C1C1C;
+         border: 5px solid rgb(95, 221, 168);
+         border-top: 50px solid rgb(95, 221, 168);
+     }
+
+     .tituloGps {
+         background-color: transparent;
+         position: absolute;
+         top: 404px;
+         text-align: center;
+         font-size: 25px;
+         text-decoration: underline;
+         color: black;
+     }
+
+     .textoLatitud {
+         font-size: 30px;
+         background-color: transparent;
+         position: relative;
+         left: -12vh;
+         top: 11vh;
+     }
+
+     .textoLongitud {
+         font-size: 30px;
+         background-color: transparent;
+         position: relative;
+         left: -12vh;
+         top: 2vh;
+     }
+
+     .gps {
+         width: 80px;
+         height: 80px;
+         background-color: transparent;
+         position: relative;
+         left: 20vh;
+         top: -15vh;
+     }
+
+     .cardTiempo {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         align-content: center;
+         padding: 20px;
+         width: 50vw;
+         height: 22vh;
+         border-radius: 15px;
+         background-color: #1C1C1C;
+         border: 5px solid rgb(95, 221, 168);
+         border-top: 50px solid rgb(95, 221, 168);
+     }
+
+     .tituloTiempo {
+         background-color: transparent;
+         position: absolute;
+         top: 670px;
+         text-align: center;
+         font-size: 25px;
+         text-decoration: underline;
+         color: black;
+     }
+
+     .textoTiempo {
+         font-size: 55px;
+         text-align: center;
+         background-color: transparent;
+         position: relative;
+         left: -16vh;
+         top: 6.5vh;
+     }
+
+     .reloj {
+         width: 75px;
+         height: 75px;
+         background-color: transparent;
+         position: relative;
+         left: 15vh;
+         top: -13vh;
+     }
+
+     .list {
+         list-style-type: none;
+     }
+
+     .item {
+         margin: 30px;
+     }
+
+     .ChartTemperatura {
+         border-radius: 1rem;
+         background-color: #1C1C1C;
+         padding: 5px;
+         position: absolute;
+     }
+
+     .ChartHumedad {
+         border-radius: 1rem;
+         background-color: #1C1C1C;
+         padding: 5px;
+         position: absolute;
+     }
+
+
+
+     .containerTemperatura {
+         width: 500px;
+         position: absolute;
+         right: 145px;
+         margin-top: 1280px;
+         top: 24px;
+     }
+
+     .containerHumedad {
+         width: 500px;
+         position: absolute;
+         right: 145px;
+         margin-top: 990px;
+         top: 28px;
+     }
+ }
+
+ /* Media Query for Large screens */
+ @media (min-width: 1281px) {
+     .header {
+         align-items: center;
+         display: flex;
+         justify-content: space-between;
+         top: 0;
+         left: 0;
+         background-color: #090909;
+         width: 100vw;
+         height: 10vh;
+         z-index: 100;
+         position: fixed;
+     }
+
+     .menu {
+         padding-left: 10px;
+     }
+
+     .logo {
+         height: 25px;
+     }
+
+     .lupa {
+         height: 21px;
+         padding: 5px;
+         padding-right: 50px;
+         padding-left: 1px;
+
+     }
+
+     .log {
+         border: 2px solid rgb(95, 221, 168);
+         border-radius: 50px;
+         padding: 4px;
+         padding-right: 20px;
+         padding-left: 20px;
+         position: relative;
+         top: -7px;
+         font-size: 15px;
+         font-weight: 500;
+     }
+
+     .log:hover {
+         color: rgb(95, 221, 168);
+         /* background-color: rgb(53, 204, 141);
+        color: white;
+        transition: all 0.2s;*/
+     }
+
+     .nos:hover {
+         color: white;
+         transition: all 0.2s;
+     }
+
+
+     .cont:hover {
+         color: white;
+         transition: all 0.2s;
+     }
+
+
+     .sub:hover {
+         color: white;
+         transition: all 0.2s;
+     }
+
+     .datos {
+         position: absolute;
+         top: 10vh;
+         width: 100%;
+         height: 100%;
+         color: white;
+         background-color: black;
+     }
+
+     .titulo {
+         text-align: center;
+         text-decoration: underline rgb(255, 255, 255);
+         padding-top: 20px;
+     }
+
+     .izquierda {
+         padding-left: 100px;
+         padding-top: 30px;
+         padding-bottom: 30px;
+     }
+
+     .cardRegistro {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         align-content: center;
+         flex: 1;
+         padding: 20px;
+         width: 30vw;
+         height: 12vh;
+         border-radius: 15px;
+         background-color: #1C1C1C;
+         border: 5px solid rgb(95, 221, 168);
+         border-top: 50px solid rgb(95, 221, 168);
+     }
+
+     .tituloRegistro {
+         background-color: transparent;
+         position: absolute;
+         top: 135px;
+         text-align: center;
+         font-size: 25px;
+         text-decoration: underline;
+         color: black;
+     }
+
+     .textoRegistro {
+         font-weight: 800;
+         font-size: 40px;
+         background-color: transparent;
+         position: relative;
+         left: -8vh;
+         text-transform: uppercase;
+     }
+
+     .camion {
+         width: 100px;
+         height: 100px;
+         background-color: transparent;
+         position: relative;
+         left: 5vh;
+         top: 1vh;
+     }
+
+     .cardGps {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         align-content: center;
+         padding: 20px;
+         width: 30vw;
+         height: 12vh;
+         border-radius: 15px;
+         background-color: #1C1C1C;
+         border: 5px solid rgb(95, 221, 168);
+         border-top: 50px solid rgb(95, 221, 168);
+     }
+
+     .tituloGps {
+         background-color: transparent;
+         position: absolute;
+         top: 335px;
+         text-align: center;
+         font-size: 25px;
+         text-decoration: underline;
+         color: black;
+     }
+
+     .textoLatitud {
+         font-size: 30px;
+         background-color: transparent;
+         position: relative;
+         left: -12vh;
+         top: 11vh;
+     }
+
+     .textoLongitud {
+         font-size: 30px;
+         background-color: transparent;
+         position: relative;
+         left: -12vh;
+         top: 2vh;
+     }
+
+     .gps {
+         width: 80px;
+         height: 80px;
+         background-color: transparent;
+         position: relative;
+         left: 20vh;
+         top: -15vh;
+     }
+
+     .list {
+         list-style-type: none;
+     }
+
+     .item {
+         margin: 30px;
+     }
+
+     .ChartTemperatura {
+         border-radius: 1rem;
+         background-color: #1C1C1C;
+         padding: 5px;
+     }
+
+     .ChartHumedad {
+         border-radius: 1rem;
+         background-color: #1C1C1C;
+         padding: 5px;
+     }
+
+     .cardTiempo {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         align-content: center;
+         padding: 20px;
+         width: 30vw;
+         height: 12vh;
+         border-radius: 15px;
+         background-color: #1C1C1C;
+         border: 5px solid rgb(95, 221, 168);
+         border-top: 50px solid rgb(95, 221, 168);
+     }
+
+     .tituloTiempo {
+         background-color: transparent;
+         position: absolute;
+         top: 535px;
+         text-align: center;
+         font-size: 25px;
+         text-decoration: underline;
+         color: black;
+     }
+
+     .textoTiempo {
+         font-size: 55px;
+         text-align: center;
+         background-color: transparent;
+         position: relative;
+         left: -16vh;
+         top: 6.5vh;
+     }
+
+     .reloj {
+         width: 75px;
+         height: 75px;
+         background-color: transparent;
+         position: relative;
+         left: 15vh;
+         top: -13vh;
+     }
+
+     .containerTemperatura {
+         width: 500px;
+         position: absolute;
+         right: 150px;
+         margin-top: 510px;
+         top: 24px;
+     }
+
+     .containerHumedad {
+         width: 500px;
+         position: absolute;
+         right: 150px;
+         margin-top: 210px;
+         top: 28px;
+     }
+ }

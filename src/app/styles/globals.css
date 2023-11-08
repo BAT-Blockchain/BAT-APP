@@ -7,8 +7,8 @@ a {
     margin: 20px;
     font-size: 14px;
     font-style: normal;
-    line-height: normal; 
-    
+    line-height: normal;
+
 }
 
 body {
@@ -16,37 +16,37 @@ body {
     margin: 0;
 }
 
- /* Media Query for Mobile Devices */
- @media (max-width: 480px) {
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
     body {
-       /* background-color: red;*/
+        /* background-color: red;*/
     }
 }
-  
+
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 640px) {
     body {
         /*background-color: yellow;*/
     }
 }
-  
+
 /* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 641px) and (max-width: 803px){
+@media (min-width: 641px) and (max-width: 803px) {
     body {
-       /* background-color: blue;*/
+        /* background-color: blue;*/
     }
 }
-  
+
 /* Media Query for Laptops and Desktops */
-@media (min-width: 804px) and (max-width: 1280px){
+@media (min-width: 804px) and (max-width: 1280px) {
     body {
-       /* background-color: green;*/
+        /* background-color: green;*/
     }
 }
-  
+
 /* Media Query for Large screens */
 @media (min-width: 1281px) {
     body {
-       /* background-color: rgb(255, 255, 255);*/
+        /* background-color: rgb(255, 255, 255);*/
     }
 }
