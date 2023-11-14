@@ -2,6 +2,9 @@
 import { useEffect } from "react"
 import { Chart } from "chart.js";
 import styles from '@/src/app/styles/Home.module.css'
+import { Fredoka } from 'next/font/google'
+
+const fredoka = Fredoka({ subsets: ['latin'], weight: '300', width: 110 })
 
 function Humedad(props) {
   useEffect(() => {
@@ -20,12 +23,14 @@ function Humedad(props) {
         ]
       }
     });
-  }, [])
+  },
+    
+  [])
   return (
     <>
       {/* line chart */}
-      <div className={styles.containerHumedad}>
-        <div className={styles.ChartHumedad}>
+      <div style={fredoka.style} className={styles.containerHumedad}>
+        <div style={fredoka.style} className={styles.ChartHumedad}>
           <canvas id='myChart2'></canvas>
         </div>
       </div>

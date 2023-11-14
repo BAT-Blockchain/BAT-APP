@@ -29,7 +29,7 @@
      .lupa {
          height: 21px;
          padding: 5px;
-         padding-right: 50px;
+         margin-right: 6vh;
          padding-left: 1px;
          display: none;
 
@@ -46,6 +46,9 @@
          font-weight: 500;
          left: -12px;
          top: 14px;
+         color: white;
+         background-color: transparent;
+         cursor: pointer;
      }
 
      .log:hover {
@@ -586,6 +589,8 @@
          font-size: 15px;
          font-weight: 500;
          margin-right: 50px;
+         color: white;
+         background-color: transparent;
      }
 
      .log:hover {
@@ -850,6 +855,8 @@
          top: -7px;
          font-size: 15px;
          font-weight: 500;
+         color: white;
+         background-color: transparent;
      }
 
      .log:hover {
@@ -1074,7 +1081,7 @@
      }
  }
 
- /* Media Query for Large screens */
+ /* Laptop y mas  */
  @media (min-width: 1281px) {
      .header {
          align-items: center;
@@ -1090,7 +1097,7 @@
      }
 
      .menu {
-         padding-left: 10px;
+         margin-left: 5vh;
      }
 
      .logo {
@@ -1100,8 +1107,8 @@
      .lupa {
          height: 21px;
          padding: 5px;
-         padding-right: 50px;
-         padding-left: 1px;
+         margin-left: 3vh;
+         margin-right: 10vh;
 
      }
 
@@ -1112,9 +1119,12 @@
          padding-right: 20px;
          padding-left: 20px;
          position: relative;
-         top: -7px;
+         top: -5px;
          font-size: 15px;
          font-weight: 500;
+         color: white;
+         background-color: transparent;
+         cursor: pointer;
      }
 
      .log:hover {

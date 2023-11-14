@@ -48,9 +48,9 @@ function Navbar() {
           ) : (
             <button
               onClick={() => signIn()}
-              className="bg-sky-400 px-3 py-2 rounded"
+                style={fredoka.style} className={styles.log}
             >
-              Sign In
+              Log In
             </button>
           )}
           <a href="" className={styles.lupa}><Busqueda width={24} height={23} /></a>
