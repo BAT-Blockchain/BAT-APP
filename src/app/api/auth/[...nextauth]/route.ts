@@ -29,8 +29,11 @@ const handler = NextAuth({
             clientId: process.env.GOOGLE_ID as string,
             clientSecret: process.env.GOOGLE_SECRET as string,
         }),
-
     ],
+    pages: {
+        signIn: '/login',
+        signOut: '/',
+    },
 });
 
 export { handler as GET, handler as POST };

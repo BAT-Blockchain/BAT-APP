@@ -50,7 +50,7 @@ export default async function Page() {
           </div>
         }
       </div>
-      <div>
+      <div className={styles.divchart}>
         <Temperatura
           data={data.temperatura}
           labels={data.time}

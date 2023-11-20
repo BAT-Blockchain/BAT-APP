@@ -13,14 +13,14 @@ function Navbar() {
   const { data: session } = useSession();
 
   return (
-    <nav className="bg-slate-900 flex items-center py-3 justify-between px-24 text-white">
+    <nav className={styles.nav}>
       <div style={fredoka.style} className={styles.header}>
         <div className={styles.left}>
           <a href="" className={styles.menu} ><Menu width={24} height={23} /></a>
-          <a href=""> <img className={styles.logo} src="logo-datos.png" /></a>
+          <a href="/main"> <img className={styles.logo} src="logo-datos.png" /></a>
         </div>
         <div className={styles.center}>
-          <a className={styles.nos} href="">NOSOTROS</a>
+          <a className={styles.nos} href="/landing">NOSOTROS</a>
           <a className={styles.cont} href="">CONTACTO</a>
           <a className={styles.sub} href="">SUBSCRIPCIÓN</a>
         </div>

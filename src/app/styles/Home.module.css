@@ -7,15 +7,14 @@
          justify-content: center;
          background-color: #090909;
          top: 0px;
-         left: 0px;
-         width: 100vw;
+         left: 3px;
+         width: 100%;
          height: 19vh;
          z-index: 100;
          position: fixed;
      }
 
      .menu {
-         padding-left: 10px;
          display: none;
      }
 
@@ -23,14 +22,10 @@
          height: 25px;
          position: relative;
          left: -10px;
-         top: -7px;
+         top: -10px;
      }
 
      .lupa {
-         height: 21px;
-         padding: 5px;
-         margin-right: 6vh;
-         padding-left: 1px;
          display: none;
 
      }
@@ -39,8 +34,8 @@
          border: 2px solid rgb(95, 221, 168);
          border-radius: 50px;
          padding: 4px;
-         padding-right: 20px;
-         padding-left: 20px;
+         padding-right: 50px;
+         padding-left: 50px;
          position: relative;
          font-size: 15px;
          font-weight: 500;
@@ -1343,4 +1338,8 @@
          margin-top: 210px;
          top: 28px;
      }
+
+    
+
+
  }
