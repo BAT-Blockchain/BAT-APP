@@ -18,9 +18,7 @@ body {
 
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
-    body {
-        /* background-color: red;*/
-    }
+    
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
@@ -46,7 +44,5 @@ body {
 
 /* Media Query for Large screens */
 @media (min-width: 1281px) {
-    body {
-        /* background-color: rgb(255, 255, 255);*/
-    }
+    
 }

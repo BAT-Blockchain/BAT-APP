@@ -1,7 +1,7 @@
 "use client";
 
 import { signIn, useSession, signOut } from "next-auth/react";
-
+import Head from "next/head";
 import Menu from '@/src/components/Menu.jsx'
 import Busqueda from '@/src/components/Busqueda'
 import styles from '@/src/app/styles/Home.module.css'
@@ -13,11 +13,12 @@ function Navbar() {
   const { data: session } = useSession();
 
   return (
+    
     <nav className={styles.nav}>
       <div style={fredoka.style} className={styles.header}>
         <div className={styles.left}>
           <a href="" className={styles.menu} ><Menu width={24} height={23} /></a>
-          <a href=""> <img className={styles.logo} src="logo-datos.png" /></a>
+          <a href=""> <img className={styles.logo} src="logoLanding.png" /></a>
         </div>
         <div className={styles.center}>
           <a className={styles.nos} href="">NOSOTROS</a>

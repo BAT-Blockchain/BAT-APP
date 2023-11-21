@@ -1,0 +1,80 @@
+@media (max-width: 480px) {
+   
+}
+
+@media (min-width: 1281px) {
+    
+   .body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+   .infoContainer{    
+    display: flex;
+    flex-direction: column;
+    margin: 25vh;
+    margin-top: 20vh;
+    margin-left: 15vh;
+    width: 80vh;
+   }
+   
+   .logo {
+       width: 40vh;
+   }
+
+    .log {
+            border: 4px solid rgb(95, 221, 168);
+            border-radius: 50px;
+            padding: 4px;
+            padding-right: 20px;
+            padding-left: 20px;
+            position: relative;
+            font-size: 25px;
+            color: white;
+            background-color: transparent;
+            width: 40vh;
+            cursor: pointer;
+        }
+
+    .log:hover {
+            color: rgb(95, 221, 168);
+            
+        }
+
+    .titulo{       
+        color: white;
+        font-size: 70px;
+    }
+
+    .fondo{
+        width: 110vh;
+        height: 170vh;
+        transform: rotate(-39.935deg);
+        border-radius: 200px;
+        background: linear-gradient(233deg, #C7F082 -16.79%, #CAFF86 19.64%, #ACF9AB 56.06%, #A1ECAA 91.89%);
+        position: relative;
+        margin-left: 115vh;
+        margin-top: -70vh;
+        
+    }
+
+    .celular{
+        height: 65vh;
+        width: 65vh;
+        transform: rotate(39.935deg);
+        margin-top: -60vh;
+        margin-left: 45vh;
+    }
+
+    .laptop{
+        height: 100vh;
+        width: 125vh;
+        transform: rotate(39.935deg);
+        margin-top: -25vh;
+    }
+
+    
+
+    
+    
+}
