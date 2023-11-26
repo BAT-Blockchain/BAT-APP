@@ -7,7 +7,7 @@ import { PrismaAdapter } from "@auth/prisma-adapter"
 import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient()
-const handler = NextAuth({
+export const authOptions = {
     adapter: PrismaAdapter(prisma),
     providers: [
         EmailProvider({
@@ -29,11 +29,12 @@ const handler = NextAuth({
             clientId: process.env.GOOGLE_ID as string,
             clientSecret: process.env.GOOGLE_SECRET as string,
         }),
+
     ],
     pages: {
         signIn: '/login',
         signOut: '/',
     },
-});
-
+};
+export const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST };
