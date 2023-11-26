@@ -20,13 +20,13 @@ export default function Page() {
             <div className={styles.loginContainer}>
                 <p style={fredoka.style} className={styles.tituloLog}>Unete a la familia B.A.T</p>
                     <ul className={styles.loginButtonsList}>
-                        <li className={styles.item} onClick={() => signIn('github')}>
+                        <li className={styles.item} onClick={() => signIn('github', { callbackUrl: '/datos' })}>
                             <div className={styles.githubLoginButton}>
                                 <GithubLoginButton />
                             </div>
                         </li>
 
-                        <li className={styles.item} onClick={() => signIn('google')}>
+                        <li className={styles.item} onClick={() => signIn('google', { callbackUrl: '/datos' })}>
                             <div className={styles.googleLoginButton}>
                                 <GoogleLoginButton />
                             </div> 

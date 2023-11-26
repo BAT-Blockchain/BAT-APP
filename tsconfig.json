@@ -37,7 +37,7 @@
     ".next/types/**/*.ts",
     "src/app/Providers.jsx",
     "src/components/Navbar.jsx"
-  ],
+, "src/app/contacto/page.jsx", "src/app/nosotros/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]

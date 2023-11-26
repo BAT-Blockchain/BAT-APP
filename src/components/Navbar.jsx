@@ -56,7 +56,7 @@ function Navbar() {
             </div>
           ) : (
             <button
-              onClick={() => signIn()}
+              onClick={() => signIn(undefined, { callbackUrl: "/datos" })}
                 style={fredoka.style} className={styles.log}
             >
               Log In
