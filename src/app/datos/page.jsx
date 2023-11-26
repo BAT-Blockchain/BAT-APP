@@ -5,9 +5,14 @@ import Humedad from '@/src/components/LineChartHumedad'
 import styles from '@/src/app/styles/Home.module.css'
 import { Fredoka } from 'next/font/google'
 
+import { getServerSession } from "next-auth"
+import { authOptions } from "@/src/app/api/auth/[...nextauth]/route"
+
 const fredoka = Fredoka({ subsets: ['latin'], weight: '300', width: 110 })
 
 export default async function Page() {
+  const session = await getServerSession(authOptions)
+  if(!session) return (<h1>Acceso denegado</h1>)
   const data = await getData()
   return (
     <div className={styles.body}>
