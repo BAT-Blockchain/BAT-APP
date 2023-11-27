@@ -4,12 +4,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 75vh;
+            height: 95vh;
         }
     
         .loginContainer {
             width: 40vh;
-            height: 35vh;
+            height: 45vh;
             background-color: #1C1C1C;
             border: 2px solid rgb(95, 221, 168);
             border-radius: 15px;

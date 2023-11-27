@@ -30,8 +30,8 @@ function Navbar() {
         </div>
         <div className={styles.center}>
           <a className={styles.nos} href="/nosotros">NOSOTROS</a>
-          <a className={styles.cont} href="/contacto">CONTACTO</a>
           <a className={styles.sub} href="/datos">DATOS</a>
+          <a className={styles.cont} href="/contacto">CONTACTO</a>
         </div>
         <div className={styles.right}>
           {session?.user ? (
