@@ -13,7 +13,7 @@ export const ZodCamionPayload = z.object({
   patente: z.string().trim().nonempty().toUpperCase().regex(regex),
   modelo: z.string().trim().nonempty(),
   capacidad: z.number(),
-  compania: z.string().trim().nonempty(),
+  companiaId: z.string().trim().nonempty(),
 })
 export type camionPayload = z.infer<typeof ZodCamionPayload>
 
@@ -24,6 +24,7 @@ export const ZodSensoresPayload = z
     latitud: z.number(),
     longitud: z.number(),
     tiempoMedicion: z.string().trim().nonempty().datetime(),
+    peso: z.number(),
   })
   .refine(checkTime, checkTimeParams)
 

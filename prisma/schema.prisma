@@ -9,26 +9,29 @@ datasource db {
 }
 
 model Camiones {
-  id        String     @id @unique(map: "id") @default(uuid())
-  tag       String     @unique @db.VarChar(255)
-  patente   String     @unique @db.VarChar(255)
-  modelo    String     @db.VarChar(255)
-  capacidad Float      @db.Float
-  compania  String     @db.VarChar(255)
-  sensores  Sensores[]
+  id         String     @id @unique(map: "id") @default(uuid())
+  tag        String     @unique @db.VarChar(255)
+  patente    String     @unique @db.VarChar(255)
+  modelo     String     @db.VarChar(255)
+  capacidad  Float      @db.Float
+  companiaId String
+  compania   User       @relation(fields: [companiaId], references: [email], onUpdate: Cascade, onDelete: Cascade)
+  sensores   Sensores[]
+
+  @@index([companiaId])
 }
 
 model Sensores {
-  id             Int       @id @unique(map: "id") @default(autoincrement())
-  temperatura    Float     @db.Float
-  humedad        Float     @db.Float
-  latitud        Float     @db.Float
-  longitud       Float     @db.Float
-  peso           Float     @default(0) @db.Float
-  tiempoMedicion DateTime  @db.Timestamp()
-  tiempoDB       DateTime  @default(now())
-  idCamion       String?
-  Camion         Camiones? @relation(fields: [idCamion], references: [tag], onUpdate: Cascade, onDelete: Cascade)
+  id             Int      @id @unique(map: "id") @default(autoincrement())
+  temperatura    Float    @db.Float
+  humedad        Float    @db.Float
+  latitud        Float    @db.Float
+  longitud       Float    @db.Float
+  peso           Float    @db.Float
+  tiempoMedicion DateTime @db.Timestamp()
+  tiempoDB       DateTime @default(now())
+  idCamion       String
+  Camion         Camiones @relation(fields: [idCamion], references: [tag], onUpdate: Cascade, onDelete: Cascade)
 
   @@unique([idCamion, tiempoMedicion])
   @@index([idCamion])
@@ -65,13 +68,14 @@ model Session {
 }
 
 model User {
-  id            String    @id @default(cuid())
+  id            String     @id @default(cuid())
   name          String?
-  email         String?   @unique
+  email         String?    @unique
   emailVerified DateTime?
   image         String?
   accounts      Account[]
   sessions      Session[]
+  camiones      Camiones[]
 }
 
 model VerificationToken {

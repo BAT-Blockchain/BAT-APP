@@ -14,7 +14,10 @@ export async function GET() {
 }
 
 export async function POST(req: Request) {
-  const body = await req.json()
-  const [output, code]: any = await createCamion(body)
-  return NextResponse.json({ mensaje: output }, { status: code })
+  if (req.headers.get("key") === process.env.ADMIN_API_KEY) {
+    const body = await req.json()
+    const [output, code]: any = await createCamion(body)
+    return NextResponse.json({ mensaje: output }, { status: code })
+  }
+  return NextResponse.json({ mensaje: "No autorizado" }, { status: 401 })
 }

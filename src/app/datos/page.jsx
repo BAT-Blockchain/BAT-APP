@@ -13,6 +13,7 @@ export default async function Page() {
   const session = await getServerSession(authOptions)
   if (!session) return (<h1>Acceso denegado</h1>)
   const data = await getData(session.user.email)
+  if (data === null) return (<h1>No hay datos</h1>)
   return (
     <div className={styles.body}>
       <div className={styles.datos}>
@@ -68,10 +69,13 @@ async function getData(company) {
     const result = await prisma.sensores.findMany({
       where: {
         Camion: {
-          compania: company
+          companiaId: company
         }
       }
     })
+    if(result.length === 0) {
+      return null
+    }
     let humedad = []
     let temperatura = []
     let time = []
@@ -87,12 +91,12 @@ async function getData(company) {
       humedad: humedad,
       temperatura: temperatura,
       time: time,
-      ubicacion: { latitud: datos[0].latitud, longitud: datos[0].longitud },
-      peso: datos[0].peso,
-      idCam: datos[0].idCamion
+      ubicacion: { latitud: result[0].latitud, longitud: result[0].longitud },
+      peso: result[0].peso,
+      idCam: result[0].idCamion
     }
   }
   catch (err) {
-    return null
+    throw new Error(err)
   }
 }

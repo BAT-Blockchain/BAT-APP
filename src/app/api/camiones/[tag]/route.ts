@@ -15,20 +15,29 @@ export async function GET(req: Request, { params: { tag } }: Props) {
 }
 
 export async function PUT(req: Request, { params: { tag } }: Props) {
-  const reqBody = await req.json()
-  const [output, code]: any = await updateCamion(reqBody, tag, "PUT")
-  const body = code === 200 ? output : { mensaje: output }
-  return NextResponse.json(body, { status: code })
+  if (req.headers.get("key") === process.env.ADMIN_API_KEY) {
+    const reqBody = await req.json()
+    const [output, code]: any = await updateCamion(reqBody, tag, "PUT")
+    const body = code === 200 ? output : { mensaje: output }
+    return NextResponse.json(body, { status: code })
+  }
+  return NextResponse.json({ mensaje: "No autorizado" }, { status: 401 })
 }
 
 export async function PATCH(req: NextRequest, { params: { tag } }: Props) {
-  const reqBody = await req.json()
-  const [output, code]: any = await updateCamion(reqBody, tag, "PATCH")
-  const body = code === 200 ? output : { mensaje: output }
-  return NextResponse.json(body, { status: code })
+  if (req.headers.get("key") === process.env.ADMIN_API_KEY) {
+    const reqBody = await req.json()
+    const [output, code]: any = await updateCamion(reqBody, tag, "PATCH")
+    const body = code === 200 ? output : { mensaje: output }
+    return NextResponse.json(body, { status: code })
+  }
+  return NextResponse.json({ mensaje: "No autorizado" }, { status: 401 })
 }
 
 export async function DELETE(req: NextRequest, { params: { tag } }: Props) {
-  const [output, code]: any = await deleteCamion(tag)
-  return NextResponse.json({ mensaje: output }, { status: code })
+  if (req.headers.get("key") === process.env.ADMIN_API_KEY) {
+    const [output, code]: any = await deleteCamion(tag)
+    return NextResponse.json({ mensaje: output }, { status: code })
+  }
+  return NextResponse.json({ mensaje: "No autorizado" }, { status: 401 })
 }
