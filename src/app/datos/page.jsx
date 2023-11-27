@@ -1,10 +1,9 @@
 import React from 'react';
-import Head from 'next/head'
 import Temperatura from '@/src/components/LineChartTemperatura.jsx'
 import Humedad from '@/src/components/LineChartHumedad'
 import styles from '@/src/app/styles/Home.module.css'
 import { Fredoka } from 'next/font/google'
-
+import { prisma } from '@/src/lib/db'
 import { getServerSession } from "next-auth"
 import { authOptions } from "@/src/app/api/auth/[...nextauth]/route"
 
@@ -13,7 +12,7 @@ const fredoka = Fredoka({ subsets: ['latin'], weight: '300', width: 110 })
 export default async function Page() {
   const session = await getServerSession(authOptions)
   if (!session) return (<h1>Acceso denegado</h1>)
-  const data = await getData()
+  const data = await getData(session.user.email)
   return (
     <div className={styles.body}>
       <div className={styles.datos}>
@@ -63,27 +62,37 @@ export default async function Page() {
   )
 }
 
-async function getData() {
-  const options = { method: 'GET' };
-  const res = await fetch("https://next-app-api.vercel.app/api/camiones/caba-cor/sensores", options)
-  const datos = await res.json()
-  let humedad = []
-  let temperatura = []
-  let time = []
-  for (const obj of datos) {
-    humedad.push(obj.humedad)
-    temperatura.push(obj.temperatura)
-    let date = new Date(obj.tiempoMedicion)
-    let hours = date.getHours()
-    let minutes = date.getMinutes() === 0 ? "00" : date.getMinutes()
-    time.push(hours + ':' + minutes)
+async function getData(company) {
+
+  try {
+    const result = await prisma.sensores.findMany({
+      where: {
+        Camion: {
+          compania: company
+        }
+      }
+    })
+    let humedad = []
+    let temperatura = []
+    let time = []
+    for (const obj of result) {
+      humedad.push(obj.humedad)
+      temperatura.push(obj.temperatura)
+      let date = new Date(obj.tiempoMedicion)
+      let hours = date.getHours()
+      let minutes = date.getMinutes() === 0 ? "00" : date.getMinutes()
+      time.push(hours + ':' + minutes)
+    }
+    return {
+      humedad: humedad,
+      temperatura: temperatura,
+      time: time,
+      ubicacion: { latitud: datos[0].latitud, longitud: datos[0].longitud },
+      peso: datos[0].peso,
+      idCam: datos[0].idCamion
+    }
   }
-  return {
-    humedad: humedad,
-    temperatura: temperatura,
-    time: time,
-    ubicacion: { latitud: datos[0].latitud, longitud: datos[0].longitud },
-    peso: datos[0].peso,
-    idCam: datos[0].idCamion
+  catch (err) {
+    return null
   }
 }
