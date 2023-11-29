@@ -11,9 +11,9 @@ const fredoka = Fredoka({ subsets: ['latin'], weight: '300', width: 110 })
 
 export default async function Page() {
   const session = await getServerSession(authOptions)
-  if (!session) return (<h1>Acceso denegado</h1>)
+  if (!session) return (<h1 style={fredoka.style} className={styles.msjDatos}> ACCESO DENEGADO, DEBES ESTAR LOGUEADO PARA VER TUS DATOS</h1>)
   const data = await getData(session.user.email)
-  if (data === null) return (<h1>No hay datos</h1>)
+  if (data === null) return (<h1 style={fredoka.style} className={styles.msjDatos}>NO HAY DATOS EN TU CUENTA</h1>)
   return (
     <div className={styles.body}>
       <div className={styles.datos}>

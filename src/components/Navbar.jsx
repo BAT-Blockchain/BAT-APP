@@ -36,15 +36,7 @@ function Navbar() {
         <div className={styles.right}>
           {session?.user ? (
             <div className="flex gap-x-2 items-center">
-              <p>
-                {session.user.name} {session.user.email}
-              </p>
-              <img
-                src={session.user.image ?? ""}
-                alt=""
-                className="w-10 h-10 rounded-full cursor-pointer"
-              />
-              <button
+              <button className={styles.logOut}
                 onClick={async () => {
                   await signOut({
                     callbackUrl: "/",
@@ -53,6 +45,12 @@ function Navbar() {
               >
                 Logout
               </button>
+              <img className={styles.Profile}
+                src={session.user.image ?? ""}
+                alt=""
+               
+              />
+              
             </div>
           ) : (
             <button
